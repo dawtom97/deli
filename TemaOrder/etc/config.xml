@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <temaerp>
+            <general>
+                <enable>1</enable>
+                <webapikey><![CDATA[ca623aaf-70f2-4587-bf4e-c31a119861d5]]></webapikey>
+                <customer_per_minute>5</customer_per_minute>
+                <order_per_minute>5</order_per_minute>
+            </general>
+        </temaerp>
+    </default>
+</config>

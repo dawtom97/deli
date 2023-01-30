@@ -1,0 +1,16 @@
+{
+  "name": "cypisnet/magento2-module-temaorder",
+  "description": "Cypisnet Magento2 module TemaOrder",
+  "require": {
+    "php": "~7.0.0"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Cypisnet\\TemaOrder\\": ""
+    }
+  }
+}

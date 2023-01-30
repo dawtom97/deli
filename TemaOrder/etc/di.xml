@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Customer\Block\Adminhtml\Edit\Tab\View\PersonalInfo" type="Cypisnet\TemaOrder\Block\Adminhtml\Customer\Edit\Tab\View\PersonalInfo" />
+    
+    <preference for="Magento\Framework\Serialize\Serializer\Json" type="Cypisnet\TemaOrder\Plugin\Serialize\Serializer\Json" />
+    
+    
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <plugin name="sales_order_additional_columns" type="Cypisnet\TemaOrder\Plugin\SalesOrderCustomColumn" sortOrder="10" disabled="false" />
+    </type>
+    
+    
+</config>

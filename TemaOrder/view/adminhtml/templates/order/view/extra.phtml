@@ -1,0 +1,28 @@
+<section class="admin__page-section order-view-billing-shipping">
+    <div class="admin__page-section-title">
+        <span class="title"><?= /* @noEscape */ __('TEMA ERP info') ?></span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item order-payment-method">
+                        <div class="admin__page-section-item-title">
+                			<span class="title"><?= /* @noEscape */ __('Order ID') ?> :</span>
+                		</div>
+            <div class="admin__page-section-item-content">
+                <?php if($info = $this->GetOrderData()): ?>
+                	<?php echo  $info; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+        
+		<div class="admin__page-section-item order-shipping-method">
+		    <div class="admin__page-section-item-title">
+		        <span class="title"><?= /* @noEscape */ __('Customer ID') ?>:</span>
+		    </div>
+		    <div class="admin__page-section-item-content">
+		     <?php if($info = $this->GetCustomerData()): ?>
+                	<?php echo  $info; ?>
+                <?php endif; ?>
+		    </div>
+		</div>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="temaerp" translate="label" sortOrder="10">
+            <label>TemaERP</label>
+        </tab>
+        <section id="temaerp" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>TemaERP Configuration</label>
+            <tab>temaerp</tab>
+            <resource>Cypisnet_TemaOrder::temaorder_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="webapiurl" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>WebApi URL</label>
+                    <comment>TemaERP WebApi Endpoint URL.</comment>
+                </field>
+                <field id="webapikey" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>WebApiKey</label>
+                    <comment>TemaERP WebApiKey.</comment>
+                </field>
+                
+                <field id="customer_per_minute" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Customer per minute</label>
+                    <comment>Number of synchronise Customer per minute.</comment>
+                </field>
+                
+                 <field id="order_per_minute" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Orders per minute</label>
+                    <comment>Number of synchronise orders per minute.</comment>
+                </field>
+                
+                <field id="order_warehouseId" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Orders warehouseId</label>
+                    <comment>Number of warehouseId for new orders.</comment>
+                </field>
+                
+                <field id="customers_TemaIDs" translate="label" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>ID for New customer in TEMA</label>
+                    <comment>Customers IDs separated by , used whean creating new customer by API.</comment>
+                </field>
+                
+                <field id="shipping_products" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Shipping to TEMA</label>
+                        <comment>Assign shipping to TEMA products</comment>
+                        
+                        <frontend_model>Cypisnet\TemaOrder\Block\Adminhtml\System\Config\Field\ShipingLink</frontend_model>
+                        <backend_model>Cypisnet\TemaOrder\Model\Config\Backend\ShipingLink</backend_model>
+                </field>
+                
+            </group>
+        </section>
+    </system>
+</config>
